@@ -1,0 +1,10 @@
+name: Trigger Site Rebuild on a CRON Schedule
+
+on:
+  schedule:
+    # Runs "at minute 55 past every hour" (see https://crontab.guru)
+    - cron: '55 * * * *'
+jobs:
+  steps:
+      - uses: actions/checkout@v3
+      - run: echo hello, world 
